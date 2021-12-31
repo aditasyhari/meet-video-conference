@@ -12,7 +12,7 @@ class Room extends Component {
                 showFullscreenButton: true,
                 iframeStyle: {
                     position: 'relative',
-                    top: "-30px",
+                    top: "-32px",
                     bottom: "2%",
                     left: 0,
                     width: '100%',
