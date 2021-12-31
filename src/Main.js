@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import {
   Route,
+  Routes,
   BrowserRouter as Router,
-  useParams
+  useParams,
 } from "react-router-dom";
 import {Helmet} from 'react-helmet'
 import Home from "./Home";
@@ -12,20 +13,28 @@ import config from "./config.js";
 class Main extends Component {
     render() {
         return (
-            <Router>
-                <Helmet>
-                  <link rel="icon" href={config.ASSET_PATH + "/logo192.png"} /> 
-                  <link rel="apple-touch-icon" href={config.ASSET_PATH + "/favicon.ico"} /> 
-                  <meta name="description" content={"Meeting room for " + config.COMPANY_NAME} />
-                  <title>{config.COMPANY_NAME} :: Meeting Room</title>
-                </Helmet>
-                <div>
-                    <div className="content">
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/:name" children={<Child />} />
-                    </div>
-                </div>
-            </Router>
+          <Router>
+            <Helmet>
+              <link rel="icon" href={config.ASSET_PATH + "/logo192.png"} />
+              <link
+                rel="apple-touch-icon"
+                href={config.ASSET_PATH + "/favicon.ico"}
+              />
+              <meta
+                name="description"
+                content={"Meeting room for " + config.COMPANY_NAME}
+              />
+              <title>{config.COMPANY_NAME} :: Meeting Room</title>
+            </Helmet>
+            <div>
+              <div className="content">
+                <Routes>
+                  <Route exact path="/" element={Home} />
+                  <Route path="/:name" element={<Child />} />
+                </Routes>
+              </div>
+            </div>
+          </Router>
         );
     }
 }
@@ -47,7 +56,7 @@ function Child() {
     {
       "short_name": config.COMPANY_NAME,
       "name": config.COMPANY_NAME + "Video Chat",
-      "description": "Video conference application for " + config.COMPANY_NAME + " built on Daily.co",
+      "description": "Video conference application for " + config.COMPANY_NAME + " product by Lici IO",
       "icons": [
         {
           "src": config.ASSET_PATH + "/favicon.ico",

@@ -12,12 +12,14 @@ body {
 .header {
   width: 100%;
   color: var(--brand-txt-color);
+  background-color: #2c2c2c;
 }
 a {
   color: var(--brand-link-color);
 }
 .room {
   letter-spacing: 0.1em;
+  background-color: #2c2c2c;
 }
 .footer {
   background-color: var(--brand-bg-color);

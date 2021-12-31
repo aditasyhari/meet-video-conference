@@ -12,11 +12,11 @@ class Room extends Component {
                 showFullscreenButton: true,
                 iframeStyle: {
                     position: 'relative',
-                    top: "4%",
-                    bottom: "4%",
+                    top: "-30px",
+                    bottom: "2%",
                     left: 0,
-                    width: '99.6%',
-                    height: '92%',
+                    width: '100%',
+                    height: '100%',
                 }
             });
             
@@ -39,18 +39,19 @@ class Room extends Component {
         const roomName = this.props.name.toUpperCase();
         const roomConfig = config.rooms[roomName];
 
-        const defaultTitle = "MEETING WITH "+ roomName + " // GUEST";
-        const defaultBackground = "logo.png";
+        const defaultTitle = "Lici Meet, room = "+ roomName;
+        // const defaultBackground = "logo.png";
 
         const title = roomConfig && roomConfig.TITLE ? roomConfig.TITLE : defaultTitle;
-        const background = roomConfig && roomConfig.BACKGROUND ? roomConfig.BACKGROUND : defaultBackground;
+        // const background = roomConfig && roomConfig.BACKGROUND ? roomConfig.BACKGROUND : defaultBackground;
 
         let frameStyle = {
-            backgroundImage: "url(" + config.ASSET_PATH + "/" + background + ")"
+            backgroundColor: "white"
+            // backgroundImage: "url(" + config.ASSET_PATH + "/" + background + ")"
         }
 
         const headerStyle = roomConfig && roomConfig.HEADER ? {
-            backgroundImage: "url(" + config.ASSET_PATH + "/" + roomConfig.HEADER + ")"
+            backgroundImage: "url(" + config.ASSET_PATH + "/" + roomConfig.HEADER + ")",
         } : {}
 
         console.log(roomConfig);
@@ -65,11 +66,11 @@ class Room extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                {/* <img
                   alt={config.COMPANY_NAME}
                   className="logo-header"
                   src={config.ASSET_PATH + "/logo-header.png"}
-                ></img>
+                ></img> */}
               </a>
             </div>
             <div className="footer">
