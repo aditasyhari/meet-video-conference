@@ -82,7 +82,7 @@ class Room extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Lici Meet
+                    Lici IO
                   </a>
                 </span>
               </div>

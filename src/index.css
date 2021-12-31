@@ -52,7 +52,7 @@ body {
 .made {
   position: absolute;
   margin-right: 1em;
-  right: 8.5em;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
