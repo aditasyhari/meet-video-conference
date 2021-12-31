@@ -31,7 +31,8 @@ class Room extends Component {
           timerElt.innerText = currentDatetime();
         }, 1);
 
-        createFrameAndJoinRoom(window.location.pathname.replace("/", "lici"));
+        createFrameAndJoinRoom("lici");
+        // createFrameAndJoinRoom(window.location.pathname.replace("/", ""));
     }
 
     render() {
