@@ -58,7 +58,6 @@ class Room extends Component {
 
         return (
           <div className="room">
-            <div id="frame" style={frameStyle}></div>
             <div className="header" style={headerStyle}>
               <h2 className="title">{title}</h2>
               <a
@@ -73,6 +72,7 @@ class Room extends Component {
                 ></img> */}
               </a>
             </div>
+            <div id="frame" style={frameStyle}></div>
             <div className="footer">
               <div className="date" id="date"></div>
               <div className="plug">
