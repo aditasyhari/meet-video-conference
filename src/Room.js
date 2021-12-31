@@ -55,19 +55,37 @@ class Room extends Component {
         console.log(roomConfig);
 
         return (
-            <div className="room">
-                <div id="frame" style={frameStyle}></div>
-                <div className="header" style={headerStyle}>
-                    <h2 className="title">{title}</h2>
-                    <a href={config.COMPANY_URL} target="_blank" rel="noopener noreferrer"><img alt={config.COMPANY_NAME} className="logo-header" src={config.ASSET_PATH + "/logo-header.png"}></img></a>
-                </div>
-                <div className="footer">
-                    <div className="date" id="date"></div>
-                    <div className="plug">
-                        <span className="made"><a href="#" target="_blank" rel="noopener noreferrer">Lici Meet</a></span>
-                    </div>
-                </div>
+          <div className="room">
+            <div id="frame" style={frameStyle}></div>
+            <div className="header" style={headerStyle}>
+              <h2 className="title">{title}</h2>
+              <a
+                href={config.COMPANY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt={config.COMPANY_NAME}
+                  className="logo-header"
+                  src={config.ASSET_PATH + "/logo-header.png"}
+                ></img>
+              </a>
             </div>
+            <div className="footer">
+              <div className="date" id="date"></div>
+              <div className="plug">
+                <span className="made">
+                  <a
+                    href={config.COMPANY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lici Meet
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         );
     };
 }
